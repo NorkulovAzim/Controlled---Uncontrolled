@@ -1,0 +1,14 @@
+Optimization 
+
+1) useMemo() -> Bu hook, uning vazifasi sahifadagi hisob-kitoblarni eslab qolish uchun ishlatiladi. Ya'ni sahifa qayta ishga tushganda o'sha hisoblash qaytadan hisoblanmasligi uchun ishlatiladi. Aynan o'sha hisoblangan sonni "cache"lab qo'yadi. Faqat dependensiylar o'zgarganda qayta hisoblab chiqadi. Agar dependensiylar o'zgarmas - avvalgi natijani qaytaradi. useMemo() shu jarayonlarni optimallashtiradi.
+
+2) memo() -> Ota komponenta render bo'lsa unga qo'shib uni ichidagi bola komponent ham render bo'lib ketadi, bola komponentni qiymati yoki propslari o'zgarmasa ham. Shu joyda memo() yordamga keladi ya'ni render bo'lmasligi kerak bo'lgan komponentni render bo'lishini oldini oladi. 
+
+3) useMemo() vs memo() -> useMemo() - hisob kitob natijasini eslab qoladi.
+memo() - Butun bir komponentni eslab qoladi.
+
+4) useCallback() -> Bu hook bo'lib, uning vazifasi funksiyani o'zini eslab qoladi. Bunda ham agar dependencies o'zgarmasa o'sha eski funksiyani yana qayta ishlataveradi. Ishlatilishi: Bola komponentadagi funksiya qayta render bo’lmasligi kerak bo’lgan funksiyalarni kamaytiradi. 
+
+5) Controlled - Input qiymati kiritganimizda darhol tekshirib qiymatlarni qabul qilib ketadi. Ya’ni biz inputga ma’lumot yozayotganimizda yozishimiz jarayonda control qilib beradi. Shuning uchun ham, controlled component deyiladi. Boshqa so’z bilan aytganda real-time validatsiya qilish uchun ishlatiladi. 
+
+6) Uncontrolled - Inputni qiymati yozilishi jarayonida boshqarib bolmaydi. Berilgan qiymat submit bo’lgandan keyingina DOM ga saqlaydi. 
